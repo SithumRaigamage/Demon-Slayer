@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demon Slayer</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <section class="home">
+
+        <video class="gameBgVid" src="dsvid.mov" autoplay muted loop></video>
+        <audio class="backgroundAudio" src="Demon Slayer.mp3" autoplay loop></audio>
+
+        <div class="HomeScreen">
+            <h1 >DEMON SLAYER</h1>
+            <p>Demon Slayer is a popular Japanese manga and anime series set in Taisho-era Japan. It follows Tanjiro Kamado,
+                a young boy seeking revenge on demons who killed his family. Joined by a group of skilled warriors, Tanjiro
+                trains to become a Demon Slayer and protect humanity. The series combines stunning animation, intense action,
+                and compelling characters, making it a beloved favorite among fans worldwide. Officially available with japanese
+                and english dubbing.
+            </p>
+            <button class="watch" onclick="toggleWatchStreams()">Watch now</button>
+            <div class="watch-streams" id="watch-streams">
+                <a href="https://www.netflix.com" target="_blank">
+                    <img src="/Images/netflix.png" alt="Watch on Netflix">
+                </a>
+                <a href="https://www.crunchyroll.com" target="_blank">
+                    <img src="/Images/crunchyroll.png" alt="Watch on Crunchyroll">
+                </a>
+                <a href="https://tv.apple.com" target="_blank">
+                    <img src="/Images/apple-tv.png" alt="Watch on Apple TV">
+                </a>
+                <a href="https://www.primevideo.com" target="_blank">
+                    <img src="/Images/Amazon Prime.png" alt="Watch on Prime Video">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="demon-slayer">
+        <h2 class="heading">Demon <span>Slayers</span></h2>
+        <div class="search">
+            <input type="text" placeholder="Enter Name" spellcheck="false">
+            <button><img src="/Images/search.png" alt="search"></button>
+        </div>
+        <div class="error" style="display:none;">
+            <p id="error"></p>
+        </div>
+        <div class="demon-slayer-profile" style="display:none;">
+            <div class="profile-info">
+
+                <p class="name"></p>
+
+                <p class="race"></p>
+
+            </div>
+            <div class="profile-img">
+                <img src="/DemonSlayer/blank.png" alt="" >
+
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="/DemonSlayer/demonAPI.js"></script>
+</body>
+</html>
