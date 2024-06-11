@@ -2,7 +2,7 @@
 
 This is a Demon Slayer web application that allows users to search for and view information about various characters from the Demon Slayer anime series. The application retrieves character data from a public API and displays it dynamically on the web page.
 
-![Demon Slayer](demo.png)
+
 
 ## Features
 
