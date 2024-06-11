@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demon Slayer</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="/Images/logo.png">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -12,7 +13,7 @@
     <section class="home">
 
         <video class="gameBgVid" src="dsvid.mov" autoplay muted loop></video>
-        <audio class="backgroundAudio" src="Demon Slayer.mp3" autoplay loop></audio>
+        <audio class="backgroundAudio" src="Demon Slayer.mp3" autoplay muted loop></audio>
 
         <div class="HomeScreen">
             <h1 >DEMON SLAYER</h1>
@@ -40,8 +41,37 @@
         </div>
     </section>
 
+    <section class="demon-slayer-introduction">
+
+        <div class="demon-slayer-intro">
+
+            <h1>Demon Slayer:<span>Kimetsu no Yaiba</span></h1>
+            <p><strong>Demon Slayer: Kimetsu no Yaiba</strong> is a Japanese anime series adapted from the manga of the same
+                name written and illustrated by Koyoharu Gotouge. The series has garnered widespread acclaim for its compelling
+                story, stunning animation, and memorable characters. Here is an introduction to the series:
+            </p>
+    
+            <h2>Plot Summary</h2>
+            <p><strong>Demon Slayer</strong> is set in Taisho-era Japan and follows the story of Tanjiro Kamado, a kind-hearted
+                boy who lives with his family in the mountains. One day, he returns home to find that his family has been
+                slaughtered by demons, with his younger sister Nezuko being the sole survivor. However, Nezuko has been
+                transformed into a demon herself. Determined to avenge his family and find a cure for his sister,
+                Tanjiro joins the Demon Slayer Corps, a secret organization dedicated to fighting demons and protecting
+                humanity.
+            </p>
+
+            <h2>Themes and Elements</h2>
+            <p><strong>Demon Slayer</strong> blends elements of action, horror, and fantasy with deep emotional and moral
+                themes. The series explores the bonds of family, the struggles of humanity against evil, and the power of
+                determination and kindness. The dynamic fight scenes are meticulously animated by Ufotable, showcasing
+                a blend of traditional and digital animation techniques that bring the story to life.
+            </p>
+        </div>
+    </section>
+
     <section class="demon-slayer">
         <h2 class="heading">Demon <span>Slayers</span></h2>
+
         <div class="search">
             <input type="text" placeholder="Enter Name" spellcheck="false">
             <button><img src="/Images/search.png" alt="search"></button>
@@ -49,21 +79,59 @@
         <div class="error" style="display:none;">
             <p id="error"></p>
         </div>
+        <div class="loading-spinner" style="display:none;"></div>
         <div class="demon-slayer-profile" style="display:none;">
             <div class="profile-info">
-
                 <p class="name"></p>
-
+                <p class="age"></p>
+                <p class="gender"></p>
                 <p class="race"></p>
-
+                <p class="birthday"></p>
+                <p class="affiliation"></p>
+                <p class="occupation"></p>
+                <p class="combat-style"></p>
+                <p class="partner"></p>
+                <p class="status"></p>
+                <p class="relatives"></p>
             </div>
             <div class="profile-img">
-                <img src="/DemonSlayer/blank.png" alt="" >
-
+                <img src="/DemonSlayer/blank.png" alt="">
             </div>
         </div>
     </section>
+
+    <section class="hashira">
+        <h2 class="heading">Hashira</h2>
+        <div class="hashira-search">
+            <input type="text" id="hashira-input" placeholder="Enter Hashira Name" spellcheck="false">
+            <button><img src="/Images/search.png" alt="search"></button>
+        </div>
+        <div class="hashira-error" style="display:none;">
+            <p id="hashira-error"></p>
+        </div>
+        <div class="hashira-loading-spinner" style="display:none;"></div>
+        <div class="hashira-profile" style="display:none;">
+            <div class="hashira-profile-info">
+                <p class="hashira-name"></p>
+                <p class="hashira-age"></p>
+                <p class="hashira-gender"></p>
+                <p class="hashira-race"></p>
+                <p class="hashira-birthday"></p>
+                <p class="hashira-affiliation"></p>
+                <p class="hashira-occupation"></p>
+                <p class="hashira-combat-style"></p>
+                <p class="hashira-status"></p>
+                <p class="hashira-relatives"></p>
+            </div>
+            <div class="hashira-profile-img">
+                <img src="/Images/blank.png" alt="">
+            </div>
+        </div>
+    </section>
+    
+    
+    <script src="/HashiraAPI/HashiraAPI.js"></script>
     <script src="script.js"></script>
-    <script src="/DemonSlayer/demonAPI.js"></script>
+    <script src="/DemonSlayerAPI/demonAPI.js"></script>
 </body>
 </html>

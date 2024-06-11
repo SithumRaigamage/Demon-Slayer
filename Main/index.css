@@ -6,6 +6,7 @@ body, html {
     font-family: Arial, sans-serif;
     height: 100%;
     overflow: auto;
+    background: black;
 }
 
 .home {
@@ -36,7 +37,6 @@ body, html {
     max-width: 600px;
     padding: 20px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.6);
 }
 
 .HomeScreen h1 {
@@ -73,6 +73,7 @@ body, html {
 }
 
 .watch-streams {
+    margin-top: 20px;
     display: none; /* Initially hidden */
 }
 
@@ -91,30 +92,54 @@ body, html {
     transform: scale(1.1);
 }
 
+
+.demon-slayer-introduction {
+    padding: 20px;
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+}
+.demon-slayer-introduction .demon-slayer-intro {
+    h1 {
+        color: #c0392b;
+        font-size: 4rem;
+    }
+    h1 span{
+        color: white;
+    }
+    h2 {
+        font-size: 2rem;
+        color: #c0392b;
+    }
+    p {
+        margin: 10px 0;
+        color: white;
+        font-size: 1.3rem;
+    }
+}
+
 .demon-slayer {
     padding: 30px;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    margin-top:70px; /* Adjust the margin to eliminate the gap */
+    margin-top:-20px; /* Adjust the margin to eliminate the gap */
     text-align: center;
 }
 .demon-slayer .heading {
     text-transform: uppercase;
-    color: #c0392b;
-    font-size: 3rem;
+    color:#c0392b ;
+    font-size: 4rem;
     
 }
 .demon-slayer .heading span {
     color: #fff;
-    font-size: 3rem;
+    font-size: 4rem;
 } 
 
 .search input{
     border: 0;
     outline: 0;
     background: #ebfffc;
-    color:#555;
     padding: 10px 25px;
     height: 40px;
     border-radius: 30px;
@@ -167,7 +192,111 @@ body, html {
 }
 
 .demon-slayer .profile-img img {
-    width: 200px;
+    width: 300px;
     height: auto;
     border-radius: 10px;
+}
+
+.loading-spinner {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #c0392b; /* Blue */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto; /* Centering the spinner under the error */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.hashira {
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    text-align: center;
+}
+.hashira .heading {
+    text-transform: uppercase;
+    color: #c0392b;
+    font-size: 4rem;
+}
+
+.hashira-search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    padding: 10px 25px;
+    height: 40px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.hashira-search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.hashira-search button img {
+    width: 20px;
+}
+.hashira-error {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    display: none;
+    color: #fff;
+}
+
+.hashira .hashira-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hashira-profile .hashira-profile-info {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.hashira-profile .hashira-profile-info p {
+    color: #fff;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.hashira .hashira-profile .hashira-profile-img {
+    flex: 1;
+    text-align: center;
+}
+
+.hashira .hashira-profile .hashira-profile-img img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hashira-loading-spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #c0392b;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: hashira-spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes hashira-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
