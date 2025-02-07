@@ -1,0 +1,27 @@
+/* Reset default margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+/* Set default font and background */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Basic section styling */
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
