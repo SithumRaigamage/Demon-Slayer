@@ -2,21 +2,23 @@
 html, body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Stops horizontal scrolling */
+    width: 100%;
     box-sizing: border-box;
 }
-
 /* Set default font and background */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #0F0F0F;
     color: #333;
 }
 
 /* Basic section styling */
 section {
     padding: 2rem;
-    margin: -1%;
+    margin: auto; /* Centering instead of negative margin */
+    max-width: 100%; /* Ensure it doesn't exceed viewport width */
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
