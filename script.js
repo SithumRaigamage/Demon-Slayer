@@ -714,7 +714,7 @@ function renderCharacters(page = 1) {
         characterDiv.className = 'col-md-6 col-lg-4';
         characterDiv.innerHTML = `
             <div class="characters-item position-relative mt-4">
-                <img src="${character.img}" alt="${character.name}" class="img-fluid w-100 characters-img" style="width: 300px; height: 300px;" />
+                <img src="${character.img}" alt="${character.name}" class="img-fluid w-100 characters-img" style="width: 350px; height: 350px;" />
                 <div class="characters-content text-center py-4">
                     <h5>${character.name}</h5>
                     <p class="mb-0">${character.race}</p>
@@ -792,3 +792,11 @@ const fetchCombatStyle = async () => {
 fetchCombatStyle();
 
 fetchCharacters();
+
+
+
+
+
+
+
+
