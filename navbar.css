@@ -1,5 +1,4 @@
 .ezy__nav4 {
-	/* Bootstrap variables */
 	--bs-body-color: #fff;
 	--bs-body-bg: #0F0F0F;
 
@@ -14,7 +13,6 @@
 /* Dark Block Style */
 .dark .ezy__nav4,
 .ezy__nav4.dark {
-	/* Bootstrap variables */
 	--bs-body-color: #ffffff;
 	--bs-body-bg: #1A1A1A;
 

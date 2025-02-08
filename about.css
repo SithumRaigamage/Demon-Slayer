@@ -1,5 +1,5 @@
 .ezy__about6 {
-    /* Bootstrap variables */
+    
     --bs-body-color: #fff;
     --bs-body-bg: #0F0F0F;
 
@@ -22,7 +22,7 @@
   /* Dark Block Style */
   .dark .ezy__about6,
   .ezy__about6.dark {
-    /* Bootstrap variables */
+    
     --bs-body-color: #ffffff;
     --bs-body-bg: #1A1A1A;
 
