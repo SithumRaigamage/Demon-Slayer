@@ -23,3 +23,28 @@ section {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Customizing the scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background */
+    border-radius: 10px;
+}
+
+/* Handle (movable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #555; /* Medium-dark color */
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Lighter shade when hovered */
+}
+
+
+
