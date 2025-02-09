@@ -1,193 +1,169 @@
 .ezy__portfolio15 {
-    /* Bootstrap variables */
-    --bs-body-bg: rgb(255, 255, 255);
-  
-    /* Easy Frontend variables */
-    --ezy-theme-color: rgb(13, 110, 253);
-    --ezy-theme-color-rgb: 13, 110, 253;
-    --ezy-border-color: #dcdcdc;
-  
-    background-color: var(--bs-body-bg);
-    color: var(--bs-body-color);
-    overflow: hidden;
-    padding: 60px 0;
-    position: relative;
+  --bs-body-color: #fff;
+  --bs-body-bg: #0F0F0F;
+  /* Demon Slayer theme colors */
+  --ezy-theme-color: #FF5733;
+  --ezy-theme-color-rgb: 255, 87, 51;
+  background-color: var(--bs-body-bg);
+}
+
+@media (min-width: 768px) {
+  .ezy__portfolio15 {
+    padding: 100px 0;
   }
-  
-  @media (min-width: 768px) {
-    .ezy__portfolio15 {
-      padding: 100px 0;
-    }
-  }
-  
-  /* Gray Block Style */
-  .gray .ezy__portfolio15,
-  .ezy__portfolio15.gray {
-    /* Bootstrap variables */
-    --bs-body-bg: rgb(246, 246, 246);
-  }
-  
-  /* Dark Gray Block Style */
-  .dark-gray .ezy__portfolio15,
-  .ezy__portfolio15.dark-gray {
-    /* Bootstrap variables */
-    --bs-body-color: #ffffff;
-    --bs-body-bg: rgb(30, 39, 53);
-  
-    /* Easy Frontend variables */
-    --ezy-border-color: rgba(209, 209, 209, 0.3);
-  }
-  
-  /* Dark Block Style */
-  .dark .ezy__portfolio15,
-  .ezy__portfolio15.dark {
-    /* Bootstrap variables */
-    --bs-body-color: #ffffff;
-    --bs-body-bg: rgb(11, 23, 39);
-  
-    /* Easy Frontend variables */
-    --ezy-border-color: rgba(214, 214, 214, 0.373);
-  }
-  
+}
+
+/* Dark Block Style */
+.dark .ezy__portfolio15,
+.ezy__portfolio15.dark {
+  --bs-body-color: #ffffff;
+  --bs-body-bg: #1A1A1A;
+
+  /* Additional Demon Slayer dark theme accents */
+  --ezy-theme-color: #FF5733;
+  --ezy-theme-color-rgb: 255, 87, 51;
+}
+
+.ezy__portfolio15-heading {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
   .ezy__portfolio15-heading {
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 1.2;
+    font-size: 45px;
   }
-  
-  @media (min-width: 768px) {
-    .ezy__portfolio15-heading {
-      font-size: 45px;
-    }
+}
+
+.ezy__portfolio15-sub-heading {
+  font-size: 18px;
+  line-height: 25px;
+  opacity: 0.8;
+}
+
+.ezy__portfolio15 .btn-outline {
+  font-size: 14px;
+  padding: 11px 25px;
+  text-transform: uppercase;
+  border-color: var(--ezy-theme-color);
+  color: var(--ezy-theme-color);
+}
+
+.ezy__portfolio15 .btn-outline:hover {
+  color: #fff;
+  border-color: rgba(var(--ezy-theme-color-rgb), 0.9);
+  background-color: rgba(var(--ezy-theme-color-rgb), 0.9);
+}
+
+/* card */
+.ezy__portfolio15 .card {
+  background-color: var(--ezy-card-bg);
+  border: 0;
+  border-radius: 0;
+}
+
+.ezy__portfolio15-card-content {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent);
+  transition: 0.5s;
+}
+
+.ezy__portfolio15-card-content:hover {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.ezy__portfolio15-card-content h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.ezy__portfolio15-card-content h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: var(--ezy-theme-color);
+}
+
+.ezy__portfolio15-card-content p {
+  font-size: 16px;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+.ezy__portfolio15-card-details {
+  width: 50%;
+  padding: 0 15px;
+  border-right: 1px dashed var(--bs-body-color);
+}
+
+/* prev and next btn */
+.ezy__portfolio15 .carousel-control-prev,
+.ezy__portfolio15 .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  background-color: rgba(var(--ezy-theme-color-rgb), 0.7);
+  color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.ezy__portfolio15 .carousel-control-prev:hover,
+.ezy__portfolio15 .carousel-control-next:hover {
+  background-color: rgba(var(--ezy-theme-color-rgb), 1);
+  color: #fff;
+}
+
+@media (min-width: 576px) {
+  .ezy__portfolio15 .carousel-control-prev {
+    left: -25px;
   }
-  
-  .ezy__portfolio15-sub-heading {
-    font-size: 18px;
-    line-height: 25px;
-    opacity: 0.8;
-  }
-  
-  .ezy__portfolio15 .btn-outline {
-    font-size: 14px;
-    padding: 11px 25px;
-    text-transform: uppercase;
-    border-color: var(--ezy-theme-color);
-    color: var(--ezy-theme-color);
-  }
-  
-  .ezy__portfolio15 .btn-outline:hover {
-    color: #fff;
-    border-color: rgba(var(--ezy-theme-color-rgb), 0.9);
-    background-color: rgba(var(--ezy-theme-color-rgb), 0.9);
-  }
-  
-  /* card */
-  .ezy__portfolio15 .card {
-    background-color: var(--ezy-card-bg);
-    border: 0;
-    border-radius: 0;
-  }
-  
-  .ezy__portfolio15-card-content {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    width: 100%;
-    color: #fff;
-    height: 100%;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent);
-    transition: 0.5s;
-  }
-  .ezy__portfolio15-card-content:hover {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.85), transparent);
-  }
-  
-  .ezy__portfolio15-card-content h4 {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 0;
-  }
-  
-  .ezy__portfolio15-card-content h5 {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 0;
-    color: var(--ezy-theme-color);
-  }
-  
-  .ezy__portfolio15-card-content p {
-    font-size: 16px;
-    margin-bottom: 0;
-    opacity: 0.8;
-  }
-  
-  .ezy__portfolio15-card-details {
-    width: 50%;
-    padding: 0 15px;
-    border-right: 1px dashed var(--bs-body-color);
-  }
-  
-  /* prev and next btn */
-  .ezy__portfolio15 .carousel-control-prev,
+
   .ezy__portfolio15 .carousel-control-next {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-    background-color: rgba(var(--ezy-theme-color-rgb), 0.7);
-    color: #fff;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-    transition: 0.4s;
+    right: -25px;
   }
-  
-  .ezy__portfolio15 .carousel-control-prev:hover,
-  .ezy__portfolio15 .carousel-control-next:hover {
-    background-color: rgba(var(--ezy-theme-color-rgb), 1);
-    color: #fff;
-  }
-  
-  @media (min-width: 576px) {
-    .ezy__portfolio15 .carousel-control-prev {
-      left: -25px;
-    }
-  
-    .ezy__portfolio15 .carousel-control-next {
-      right: -25px;
-    }
-  }
-  
-  /* pagination */
+}
+
+/* pagination */
+.ezy__portfolio15-pagination .page-link {
+  background-color: transparent;
+  border: 1px solid var(--ezy-border-color);
+  padding: 7px 13px;
+  font-size: 14px;
+  color: var(--bs-body-color);
+  border-radius: 8px;
+}
+
+.ezy__portfolio15-pagination .page-link:hover,
+.ezy__portfolio15-pagination .page-link.active {
+  color: #f6f6f6;
+  background-color: rgba(var(--ezy-theme-color-rgb), 0.9) !important;
+  border: 1px solid rgba(var(--ezy-theme-color-rgb), 0.9);
+}
+
+.ezy__portfolio15-arrow {
+  background-color: var(--ezy-theme-color) !important;
+  border: 1px solid var(--ezy-theme-color) !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+}
+
+@media (min-width: 567px) {
   .ezy__portfolio15-pagination .page-link {
-    background-color: transparent;
-    border: 1px solid var(--ezy-border-color);
-    padding: 7px 13px;
-    font-size: 14px;
-    color: var(--bs-body-color);
-    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 18px;
   }
-  
-  .ezy__portfolio15-pagination .page-link:hover,
-  .ezy__portfolio15-pagination .page-link.active {
-    color: #f6f6f6;
-    background-color: rgba(var(--ezy-theme-color-rgb), 0.9) !important;
-    border: 1px solid rgba(var(--ezy-theme-color-rgb), 0.9);
-  }
-  
-  .ezy__portfolio15-arrow {
-    background-color: var(--ezy-theme-color) !important;
-    border: 1px solid var(--ezy-theme-color) !important;
-    border-radius: 8px !important;
-    color: #fff !important;
-  }
-  
-  @media (min-width: 567px) {
-    .ezy__portfolio15-pagination .page-link {
-      padding: 10px 18px;
-      font-size: 18px;
-    }
-  }
+}

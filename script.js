@@ -226,7 +226,6 @@
 //         quote: "Compassion can make a person's heart infinitely tough. A sword that you swing for the sake of others can have power that is immense. You must become that kind of person."
 //     },
 
-
 //     {
 //         name: 'Shinjuro Rengoku',
 //         id: '026',
@@ -442,7 +441,7 @@
 //         skill: 'Infinity Castle Manipulation',
 //         quote: "I decline."
 //     },
-    
+
 //     {
 //         name: 'Slasher',
 //         id: '050',
@@ -485,7 +484,7 @@
 //         race: 'Demon',
 //         affiliation: 'Twelve Kizuki',
 //         skill: 'Emotion Manifestation',
-//         quote: "Since the day I was born I've never lied... not even once! I'm a good natured weakling! I deserve pity, but no one has any sympathy for me." 
+//         quote: "Since the day I was born I've never lied... not even once! I'm a good natured weakling! I deserve pity, but no one has any sympathy for me."
 //     },
 
 //     {
@@ -494,7 +493,7 @@
 //         race: 'Demon',
 //         affiliation: 'Twelve Kizuki',
 //         skill: 'Porcelain Vase Spells',
-//         quote: "...You seem desperate. It's embarrassing" 
+//         quote: "...You seem desperate. It's embarrassing"
 //     },
 
 //     {
@@ -503,7 +502,7 @@
 //         race: 'Demon',
 //         affiliation: 'Twelve Kizuki',
 //         skill: 'Dual Kama',
-//         quote: "The sufferings of my past were lessons on what to do to others as revenge! If I don't cause misery equal to my own unhappiness, I'll never balance the scales!" 
+//         quote: "The sufferings of my past were lessons on what to do to others as revenge! If I don't cause misery equal to my own unhappiness, I'll never balance the scales!"
 //     },
 
 //     {
@@ -512,7 +511,7 @@
 //         race: 'Demon',
 //         affiliation: 'Twelve Kizuki',
 //         skill: 'Obi Sash Manipulation',
-//         quote: "We beautiful, powerful demons... can do anything we want!" 
+//         quote: "We beautiful, powerful demons... can do anything we want!"
 //     },
 
 //     {
@@ -672,7 +671,7 @@
 //         id: '075',
 //         race: 'Human',
 //         affiliation: 'Shinazugawa Family',
-//         skill: 'none',      
+//         skill: 'none',
 //         quote: 'none'
 //     },
 // ]
@@ -681,38 +680,38 @@
 
 var characterList = [];
 
-const apiUrl ='https://www.demonslayer-api.com/api/v1/characters?limit=45&page=1';
+const apiUrl =
+  "https://www.demonslayer-api.com/api/v1/characters?limit=45&page=1";
 
-const combatStyle = 'https://www.demonslayer-api.com/api/v1/combat-styles?limit=45&page=1';
-
+const combatStyle =
+  "https://www.demonslayer-api.com/api/v1/combat-styles?limit=45&page=1";
 
 const fetchCharacters = async () => {
-    try {
-        const response = await fetch(apiUrl);
-        characterList = await response.json();
-        // console.log('data', characterList);
-        renderCharacters();
-        setupPagination();
-    }
-    catch (error) {
-        console.log('error', error);
-    }
-}
+  try {
+    const response = await fetch(apiUrl);
+    characterList = await response.json();
+    // console.log('data', characterList);
+    renderCharacters();
+    setupPagination();
+  } catch (error) {
+    console.log("error", error);
+  }
+};
 
 function renderCharacters(page = 1) {
-    const charactersContainer = document.querySelector('#characters .row');
-    charactersContainer.innerHTML = '';
+  const charactersContainer = document.querySelector("#characters .row");
+  charactersContainer.innerHTML = "";
 
-    const itemsPerPage = 6;
-    const start = (page - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    
-    const charactersToShow = characterList.content.slice(start, end);
+  const itemsPerPage = 6;
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
 
-    charactersToShow.forEach(character => {
-        const characterDiv = document.createElement('div');
-        characterDiv.className = 'col-md-6 col-lg-4';
-        characterDiv.innerHTML = `
+  const charactersToShow = characterList.content.slice(start, end);
+
+  charactersToShow.forEach((character) => {
+    const characterDiv = document.createElement("div");
+    characterDiv.className = "col-md-6 col-lg-4";
+    characterDiv.innerHTML = `
             <div class="characters-item position-relative mt-4">
                 <img src="${character.img}" alt="${character.name}" class="img-fluid w-100 characters-img" style="width: 350px; height: 350px;" />
                 <div class="characters-content text-center py-4">
@@ -721,82 +720,166 @@ function renderCharacters(page = 1) {
                 </div>
             </div>
         `;
-        charactersContainer.appendChild(characterDiv);
-    });
+    charactersContainer.appendChild(characterDiv);
+  });
 }
 
 function setupPagination() {
-    const totalPages = Math.ceil(characterList.content.length / 6);
-    const paginationList = document.querySelector('.pagination__list');
-    
-    // Add click handlers to prev/next buttons
-    const prevButton = paginationList.querySelector('li:first-child a');
-    const nextButton = paginationList.querySelector('li:last-child a');
-    
-    let currentPage = 1;
+  const totalPages = Math.ceil(characterList.content.length / 6);
+  const paginationList = document.querySelector(".pagination__list");
 
-    prevButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (currentPage > 1) {
-            currentPage--;
-            renderCharacters(currentPage);
-            updatePaginationState();
-        }
-    });
+  // Add click handlers to prev/next buttons
+  const prevButton = paginationList.querySelector("li:first-child a");
+  const nextButton = paginationList.querySelector("li:last-child a");
 
-    nextButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (currentPage < totalPages) {
-            currentPage++;
-            renderCharacters(currentPage);
-            updatePaginationState();
-        }
-    });
+  let currentPage = 1;
 
-    // Add click handlers to number buttons
-    const numberButtons = paginationList.querySelectorAll('a[aria-label^="Go to page"]');
-    numberButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            currentPage = parseInt(button.textContent);
-            renderCharacters(currentPage);
-            updatePaginationState();
-        });
-    });
-
-    function updatePaginationState() {
-        // Update disabled state of prev/next buttons
-        prevButton.classList.toggle('pagination__item--disabled', currentPage === 1);
-        nextButton.classList.toggle('pagination__item--disabled', currentPage === totalPages);
-
-        // Update selected state of number buttons
-        numberButtons.forEach(button => {
-            button.classList.toggle('pagination__item--selected', 
-                parseInt(button.textContent) === currentPage);
-        });
+  prevButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (currentPage > 1) {
+      currentPage--;
+      renderCharacters(currentPage);
+      updatePaginationState();
     }
+  });
+
+  nextButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderCharacters(currentPage);
+      updatePaginationState();
+    }
+  });
+
+  // Add click handlers to number buttons
+  const numberButtons = paginationList.querySelectorAll(
+    'a[aria-label^="Go to page"]'
+  );
+  numberButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      currentPage = parseInt(button.textContent);
+      renderCharacters(currentPage);
+      updatePaginationState();
+    });
+  });
+
+  function updatePaginationState() {
+    // Update disabled state of prev/next buttons
+    prevButton.classList.toggle(
+      "pagination__item--disabled",
+      currentPage === 1
+    );
+    nextButton.classList.toggle(
+      "pagination__item--disabled",
+      currentPage === totalPages
+    );
+
+    // Update selected state of number buttons
+    numberButtons.forEach((button) => {
+      button.classList.toggle(
+        "pagination__item--selected",
+        parseInt(button.textContent) === currentPage
+      );
+    });
+  }
 }
 
+let combatList = { content: [] }; // Store fetched combat styles
+const itemsPerPage = 6;
+let currentPage = 1;
 
 const fetchCombatStyle = async () => {
-    try {
-        const response = await fetch(combatStyle);
-        characterList = await response.json();
-        console.log('data', characterList);
-    }
-    catch (error) {
-        console.log('error', error);
-    }
+  try {
+    const response = await fetch(combatStyle);
+    combatList = await response.json();
+    console.log("data", combatList);
+    renderCombatStyle();
+    updatePagination();
+  } catch (error) {
+    console.log("error", error);
+  }
+};
+
+function renderCombatStyle() {
+  const combatContainer = document.getElementById("cardsContainer");
+  combatContainer.innerHTML = "";
+
+  // Calculate pagination
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginatedItems = combatList.content.slice(start, end);
+
+  // Generate Cards
+  paginatedItems.forEach((card) => {
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("col-12", "col-md-6", "col-lg-4");
+
+    cardElement.innerHTML = `
+        <div class="card mt-4">
+            <div class="card-head position-relative">
+                <img class="card-img-top" src="${card.img}" alt="Course Image" style="width: 350px; height: 350px;" />
+                <div class="ezy__portfolio15-card-content px-5 pb-4 text-center">
+                    <h4 class="mx-lg-3">${card.name}</h4>
+                    <p>${card.description}</p>
+                </div>
+            </div>
+        </div>
+    `;
+    combatContainer.appendChild(cardElement);
+  });
 }
 
+// Pagination Controls
+function updatePagination() {
+  const paginationContainer = document.querySelector(".pagination");
+  paginationContainer.innerHTML = "";
+
+  let totalPages = Math.ceil(combatList.content.length / itemsPerPage);
+
+  // Previous Button
+  const prevBtn = document.createElement("li");
+  prevBtn.classList.add("page-item", "me-2", "mt-2", "mt-sm-0");
+  prevBtn.innerHTML = `<a class="page-link" href="#" aria-label="Previous"><i class="fas fa-angle-left"></i></a>`;
+  prevBtn.addEventListener("click", function () {
+    if (currentPage > 1) {
+      currentPage--;
+      renderCombatStyle();
+      updatePagination();
+    }
+  });
+  paginationContainer.appendChild(prevBtn);
+
+  // Page Number Buttons
+  for (let i = 1; i <= totalPages; i++) {
+    const pageBtn = document.createElement("li");
+    pageBtn.classList.add("page-item", "mx-2", "mt-2", "mt-sm-0");
+    if (i === currentPage) pageBtn.classList.add("active");
+    pageBtn.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+    pageBtn.addEventListener("click", function () {
+      currentPage = i;
+      renderCombatStyle();
+      updatePagination();
+    });
+    paginationContainer.appendChild(pageBtn);
+  }
+
+  // Next Button
+  const nextBtn = document.createElement("li");
+  nextBtn.classList.add("page-item", "ms-2", "mt-2", "mt-sm-0");
+  nextBtn.innerHTML = `<a class="page-link" href="#" aria-label="Next"><i class="fas fa-angle-right"></i></a>`;
+  nextBtn.addEventListener("click", function () {
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderCombatStyle();
+      updatePagination();
+    }
+  });
+  paginationContainer.appendChild(nextBtn);
+}
+
+// Fetch data on page load
 fetchCombatStyle();
 
 fetchCharacters();
-
-
-
-
-
-
-
-
