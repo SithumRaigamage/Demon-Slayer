@@ -116,3 +116,20 @@
 	background-color: var(--bs-body-color);
 	color: var(--bs-body-bg);
 }
+
+.ezy__nav4 .navbar-nav {
+	display: flex;
+	gap: 10px;
+}
+
+.ezy__nav4 .btn-outline-light {
+	border-color: var(--bs-body-color);
+	color: var(--bs-body-color);
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.ezy__nav4 .btn-outline-light:hover {
+	background-color: #FF5733;
+	color: #fff;
+	border-color: #FF5733;
+}
