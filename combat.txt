@@ -1,0 +1,148 @@
+[
+
+    {
+        "id": 16,
+        "name": "Insect Breathing",
+        "description": "Insect Breathing is a Breathing Style that mimics insects, specifically their lethal stings and movements, and replicates it with user´s movements, techniques and abilities. Is a Breathing Style derived from Flower Breathing.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/insect-breathing.webp",
+        "combat_style_character": [
+            {
+                "id": 20,
+                "name": "Shinobu Kocho",
+                "description": "Shinobu is the current Insect Hashira. After a demon killed her parents, she joined the Demon Slayer Corps in order to protect others from suffering the same fate as her."
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Thread Manipulation",
+        "description": "Rui´s Blood Demon Art allowed him to create thin threads indiscernible from silk from his own flesh and manipulate them however he pleased. He typically extended the threads from his fingertips like a puppet master.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/thread-manipulation.webp",
+        "combat_style_character": [
+            {
+                "id": 26,
+                "name": "Rui",
+                "description": "Rui is the leader of the Spider Family. He was the primary antagonist in the Mount Natagumo Arc of Demon Slayer. He was a demon affiliated with the Twelve Demon Moons, holding the position of Lower Rank Five"
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Serpent Breathing",
+        "description": "A Breathing Style Obanai created himself and mastered. He makes use of twists and turns similar to how a serpent slithers to attack. Obanai also learnt to incorporate his pet snake, Kaburamaru, into this Breathing Style, making it extremely effective.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/serpent-breathing.webp",
+        "combat_style_character": [
+            {
+                "id": 33,
+                "name": "Obanai Iguro",
+                "description": "He is a Demon Slayer of the Demon Slayer Corps and the current Serpent Hashira. Obanai is a very harsh and strict individual who shows no concern for those who do not abide by the rules of the Demon Slayer Corps."
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Sleep Inducement",
+        "description": "Enmu´s Blood Demon Art granted him the ability to force anyone into a deep sleep. He can do this through different means, some more subtle than others, but all effectively leaving his foes vulnerable and unable to fight.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/sleep-inducement.webp",
+        "combat_style_character": [
+            {
+                "id": 35,
+                "name": "Enmu",
+                "description": "He was a demon affiliated with the Twelve Demon Moons, holding the position of Lower Rank One. As Lower Rank One, Enmu was the strongest Lower Rank and closest to matching the strength of the Upper Ranks Demon Moons."
+            }
+        ]
+    },
+    
+    {
+        "id": 31,
+        "name": "Destructive Death",
+        "description": "Akaza´s Blood Demon Art is centered around martial arts, combining the manipulation of destructive shockwaves and the Soryu style martial arts he mastered when he was a human.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/destructive-death.webp",
+        "combat_style_character": [
+            {
+                "id": 36,
+                "name": "Akaza",
+                "description": "He is a demon affiliated with the Twelve Demon Moons, holding the position of Upper Rank Three. As the third highest ranking member of the Twelve Demon Moons, Akaza is an exceptionally powerful demon and the fourth strongest in existence, after Doma, Kokushibo, and Muzan."
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Obi Sash Manipulation",
+        "description": "Daki´s Blood Demon Art allowed her to create flower-patterned obi sashes from her flesh, as well as freely manipulating them at will",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/obi-manipulation.webp",
+        "combat_style_character": [
+            {
+                "id": 37,
+                "name": "Daki",
+                "description": "She is a demon affiliated with the Twelve Demon Moons, being the secondary holder of the position of Upper Rank Six, a position she shared with the primary holder, her older brother Gyutaro."
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Blood Manipulation",
+        "description": "Gyutaro´s Blood Demon Art allowed him to manipulate his own body´s blood in various ways. He was shown to generate them from his flesh or from open wounds on his body or release blood at will from his veins.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/blood-manipulation.webp",
+        "combat_style_character": [
+            {
+                "id": 38,
+                "name": "Gyutaro",
+                "description": "As the real Upper Rank Six, Gyutaro was an extremely powerful demon with over a century´s worth of combat experience under his belt, having killed and devoured 15 Hashira in the past"
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Emotion Manifestation",
+        "description": "Hantengu´s Blood Demon Art allows him to manifest his emotions as younger clones of himself. Each clone personifies a core emotion, which can be identified by a kanji on their tongue. These clones all have different appearances, abilities, and weapons.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/emotion-manifestation.webp",
+        "combat_style_character": [
+            {
+                "id": 40,
+                "name": "Hantengu",
+                "description": "He is a demon affiliated with the Twelve Demon Moons, holding the position of Upper Rank Four. Hantengu seems to believe that he is completely innocent despite the obvious evidence pointing toward his numerous crimes"
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Porcelain Vase Spells",
+        "description": "Gyokko´s Blood Demon Art permit him spawn pots anywhere around. Gyokko is able to teleport into different pots to avoid attacks and also he can summon grotesque fish like Demons from his pots.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/porcelain-vase.webp",
+        "combat_style_character": [
+            {
+                "id": 41,
+                "name": "Gyokko",
+                "description": "He is a demon affiliated with the Twelve Demon Moons, holding the position of Upper Rank Five. Gyokko is an easily excitable demon, constantly fawning over new inspirations for what he deems his \"art\" or what he finds to be sublime, sometimes even going against his initial impressions."
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Infinity Castle Manipulation",
+        "description": "Nakime´s Blood Demon Art takes the form of an extra-dimensional space that houses a fortress of immense scale. As its owner, Nakime possesses absolute dominion over the space, being able to manipulate and alter it at will by simply strumming her biwa.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/infinite-castle.webp",
+        "combat_style_character": [
+            {
+                "id": 43,
+                "name": "Nakime",
+                "description": "She is a demon who owns and controls the Infinity Castle and serves directly under Muzan Kibutsuji. Nakime is aloof and taciturn, almost never speaking and displaying little to no emotion or will outside of obeying orders. She was extremely loyal to Muzan, listening and following his every order faultlessly."
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Moon Breathing",
+        "description": "Kokushibo is the first demon that utilized Breathing Styles. His Moon Breathing is one of the most dangerous and powerful ones. He can create many chaotic crescent moon blades when slashing that vary in length and size in crescent shaped sword attacks.",
+        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/moon-breathing.webp",
+        "combat_style_character": [
+            {
+                "id": 44,
+                "name": "Kokushibo",
+                "description": "He is a demon affiliated with the Twelve Denon Moons, holding the highest position, Upper Rank One. He has battled countless Demon Slayers and has amassed vast experience and knowledge over his near 500-year long life."
+            }
+        ]
+    },
+    
+]

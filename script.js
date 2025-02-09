@@ -104,4 +104,19 @@ function setupPagination() {
   }
 }
 
+const CombatUrl ="https://www.demonslayer-api.com/api/v1/combat-styles?limit=45&page=1";
+
+
+const fetchCombat = async () => {
+  try {
+    const response = await fetch(CombatUrl);
+    character = await response.json();
+    console.log('combatList :', character);
+  } catch (error) {
+    console.log("error", error);
+  }
+};
+
+fetchCombat();
+
 fetchCharacters();
