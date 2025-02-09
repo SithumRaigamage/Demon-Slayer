@@ -1,49 +1,179 @@
 [
-
+    
     {
-        "id": 16,
-        "name": "Insect Breathing",
-        "description": "Insect Breathing is a Breathing Style that mimics insects, specifically their lethal stings and movements, and replicates it with user´s movements, techniques and abilities. Is a Breathing Style derived from Flower Breathing.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/insect-breathing.webp",
+        "id": 5,
+        "name": "Flesh Manipulation",
+        "description": "Flesh Manipulation is a supernatural ability possessed by demons that allow them to alter and control their own flesh and body.",
+        "img": "",
         "combat_style_character": [
             {
-                "id": 20,
-                "name": "Shinobu Kocho",
-                "description": "Shinobu is the current Insect Hashira. After a demon killed her parents, she joined the Demon Slayer Corps in order to protect others from suffering the same fate as her."
+                "id": 7,
+                "name": "Hand Demon",
+                "description": "The Hand Demon was the primary antagonist of the Final Selection Arc of Demon Slayer. He was a notorious demon who killed thirteen of Sakonji Urokodaki´s apprentices"
             }
         ]
     },
     {
-        "id": 21,
-        "name": "Thread Manipulation",
-        "description": "Rui´s Blood Demon Art allowed him to create thin threads indiscernible from silk from his own flesh and manipulate them however he pleased. He typically extended the threads from his fingertips like a puppet master.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/thread-manipulation.webp",
+        "id": 6,
+        "name": "Dual Wielding",
+        "description": " Genya utilizes both a double-barreled shotgun with a Nichirin blade. He is shown to excel in blending both long-ranged and short-ranged combat",
+        "img": "",
         "combat_style_character": [
             {
-                "id": 26,
-                "name": "Rui",
-                "description": "Rui is the leader of the Spider Family. He was the primary antagonist in the Mount Natagumo Arc of Demon Slayer. He was a demon affiliated with the Twelve Demon Moons, holding the position of Lower Rank Five"
+                "id": 8,
+                "name": "Genya Shinazugawa",
+                "description": "He is the younger brother of the Wind Hashira and as one of the five that survived Final Selection, Genya possesses a relatively strong foundation as a Demon Slayer even without utilizing a Breathing Style."
             }
         ]
     },
     {
-        "id": 27,
-        "name": "Serpent Breathing",
-        "description": "A Breathing Style Obanai created himself and mastered. He makes use of twists and turns similar to how a serpent slithers to attack. Obanai also learnt to incorporate his pet snake, Kaburamaru, into this Breathing Style, making it extremely effective.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/serpent-breathing.webp",
+        "id": 9,
+        "name": "Swamp Domain",
+        "description": "The Swamp Demon was able to conjure a pocket swamp dimension in which he can navigate freely.",
+        "img": "",
         "combat_style_character": [
             {
-                "id": 33,
-                "name": "Obanai Iguro",
-                "description": "He is a Demon Slayer of the Demon Slayer Corps and the current Serpent Hashira. Obanai is a very harsh and strict individual who shows no concern for those who do not abide by the rules of the Demon Slayer Corps."
+                "id": 13,
+                "name": "Swamp Demon",
+                "description": "He is the main antagonist of the Kidnapper´s Bog Arc. He was a demon who went through a rash of kidnappings during the first mission of Tanjiro Kamado for the Demon Slayer Corps."
             }
         ]
     },
     {
-        "id": 29,
-        "name": "Sleep Inducement",
-        "description": "Enmu´s Blood Demon Art granted him the ability to force anyone into a deep sleep. He can do this through different means, some more subtle than others, but all effectively leaving his foes vulnerable and unable to fight.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/sleep-inducement.webp",
+        "id": 11,
+        "name": "Blood Bewitchment",
+        "description": "Tamayo can create illusions and induce hallucinations that affect the eyesight of her target by surrounding them with flower patterns.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 15,
+                "name": "Tamayo",
+                "description": "Tamayo is a gentle, wise, and incredibly intelligent demon. Having devoted most of her life to the researching of demons and human transformation into one"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Blindfold ",
+        "description": "Yushiro´s Blood Demon Art allows him to create paper talismans which possess the ability to mask or reveal something´s presence.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 16,
+                "name": "Yushiro",
+                "description": "He only cares for Tamayo and hates when others get in the way of his spending time with her"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Hiasobi Temari",
+        "description": "Susamaru´s Blood Demon Art allows her to conjure temari handballs at will. These handballs are extremely durable, being able to withstand being thrown and kicked at high speeds and destroy any objects they come in contact with.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 17,
+                "name": "Susamaru",
+                "description": "Susamaru, also known as the Temari Demon, was one of the two primary antagonists in the Asakusa Arc of Demon Slayer along with Yahaba. She was a demon who was tricked into believing she was a member of the Twelve Demon Moons."
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Koketsu Arrow",
+        "description": "Yahaba´s Blood Demon Art allowed him to conjure and manipulate invisible red arrows by blinking the eyes on each of his palms.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 18,
+                "name": "Yahaba",
+                "description": "Yahaba, also known as the Arrow Demon, was one of the two primary antagonists in the Asakusa Arc of Demon Slayer, along with Susamaru. He was a demon who was tricked into believing he was a member of the Twelve Demon Moons."
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Drum Spells",
+        "description": "Kyogai harbored 6 Tsuzumi Drums imbedded in different parts of his body and each one of them, when played, enacts a certain effect on his surroundings.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 19,
+                "name": "Kyogai",
+                "description": "Kyogai was a demon formerly affiliated with the Twelve Demon Moons, having previously held the position of Lower Rank Six before Muzan Kibutsuji excommunicated him for reaching his limit as a demon and losing his ability to become stronger."
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Poison Manipulation",
+        "description": "Spider demon Son´s most potent and dangerous ability is his power to generate and manipulate deadly poison.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 22,
+                "name": "Spider Son",
+                "description": "He was member of the Spider Family, and he takes the form of a giant spider possessing a human head. His face, like Mother and Daughter, had the same facial features of red dots, white skin and hair similar to his \"younger brother\" Rui."
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Silk Manipulation",
+        "description": "Like her \"mother\" and Rui, Spider demon Daughter can manipulate threads made from her own cells, this time in a fashion similar to silk that forms a cocoon instead of threads that resemble wires.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 23,
+                "name": "Spider Daughter",
+                "description": "She was member of the Spider Family, and she is shown to be the most cautious within her \"family,\" having instead opted to observe and stand back rather than jump right into the battle against Demon Slayers."
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Puppetry",
+        "description": "Spider demon Mother could create and manifest threads from the tips of her fingers that can extend to cover an entire mountain. She used her threads in a unique manner; by utilizing them to manipulate bodies like puppets.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 24,
+                "name": "Spider Mother",
+                "description": "She was member of the Spider Family. Like most demons, Mother was cruel, unfeeling, and murderous towards humans. She ruthlessly controlled dozens of Demon Slayers through her threads and manipulated them into killing each other."
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Metamorphosis",
+        "description": "Spider demon Father possessed the ability to shed his outer skin in order to transform into a more powerful form with increased physical power and regenerative abilities, making him even stronger and durable than in his original form.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 25,
+                "name": "Spider Father",
+                "description": "He was member of the Spider Family. Physically, he was the most formidable of his \"family\", possessing great height and a powerfully built physique."
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Stone Breathing",
+        "description": "A Breathing Style Gyomei either mastered himself or learned from a cultivator. In his own version of this Breathing Style, Gyomei incorporates his superhuman sense of hearing and physical strength to utilize a spiked flail and axe to use its techniques.",
+        "img": "",
+        "combat_style_character": [
+            {
+                "id": 32,
+                "name": "Gyomei Himejima",
+                "description": "He is a Demon Slayer of the Demon Slayer Corps and the current Stone Hashira. Gyomei also serves as the mentor of Genya Shinazugawa. He is stated to be the strongest Demon Slayer in the entire Demon Slayer Corps."
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Dream Manipulation",
+        "description": "Enmu´s Blood Demon Art´s secondary ability was his power to enter, manipulate and control someone´s dreams when they are asleep.",
+        "img": "",
         "combat_style_character": [
             {
                 "id": 35,
@@ -52,90 +182,24 @@
             }
         ]
     },
-    
     {
-        "id": 31,
-        "name": "Destructive Death",
-        "description": "Akaza´s Blood Demon Art is centered around martial arts, combining the manipulation of destructive shockwaves and the Soryu style martial arts he mastered when he was a human.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/destructive-death.webp",
+        "id": 34,
+        "name": "Cryokinesis",
+        "description": "Doma´s Blood Demon Art grants him extremely powerful cryokinesis. He can generate ice and frost from his flesh and blood and can spawn it anywhere in his vicinity, as well as manipulating it at will.",
+        "img": "",
         "combat_style_character": [
             {
-                "id": 36,
-                "name": "Akaza",
-                "description": "He is a demon affiliated with the Twelve Demon Moons, holding the position of Upper Rank Three. As the third highest ranking member of the Twelve Demon Moons, Akaza is an exceptionally powerful demon and the fourth strongest in existence, after Doma, Kokushibo, and Muzan."
+                "id": 39,
+                "name": "Doma",
+                "description": "He is a demon affiliated with the Twelve Demon Moons, holding the second highest position, Upper Rank Two. Doma is outwardly friendly and cheery, possessing an approachable and charismatic air."
             }
         ]
     },
     {
-        "id": 32,
-        "name": "Obi Sash Manipulation",
-        "description": "Daki´s Blood Demon Art allowed her to create flower-patterned obi sashes from her flesh, as well as freely manipulating them at will",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/obi-manipulation.webp",
-        "combat_style_character": [
-            {
-                "id": 37,
-                "name": "Daki",
-                "description": "She is a demon affiliated with the Twelve Demon Moons, being the secondary holder of the position of Upper Rank Six, a position she shared with the primary holder, her older brother Gyutaro."
-            }
-        ]
-    },
-    {
-        "id": 33,
-        "name": "Blood Manipulation",
-        "description": "Gyutaro´s Blood Demon Art allowed him to manipulate his own body´s blood in various ways. He was shown to generate them from his flesh or from open wounds on his body or release blood at will from his veins.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/blood-manipulation.webp",
-        "combat_style_character": [
-            {
-                "id": 38,
-                "name": "Gyutaro",
-                "description": "As the real Upper Rank Six, Gyutaro was an extremely powerful demon with over a century´s worth of combat experience under his belt, having killed and devoured 15 Hashira in the past"
-            }
-        ]
-    },
-    {
-        "id": 35,
-        "name": "Emotion Manifestation",
-        "description": "Hantengu´s Blood Demon Art allows him to manifest his emotions as younger clones of himself. Each clone personifies a core emotion, which can be identified by a kanji on their tongue. These clones all have different appearances, abilities, and weapons.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/emotion-manifestation.webp",
-        "combat_style_character": [
-            {
-                "id": 40,
-                "name": "Hantengu",
-                "description": "He is a demon affiliated with the Twelve Demon Moons, holding the position of Upper Rank Four. Hantengu seems to believe that he is completely innocent despite the obvious evidence pointing toward his numerous crimes"
-            }
-        ]
-    },
-    {
-        "id": 36,
-        "name": "Porcelain Vase Spells",
-        "description": "Gyokko´s Blood Demon Art permit him spawn pots anywhere around. Gyokko is able to teleport into different pots to avoid attacks and also he can summon grotesque fish like Demons from his pots.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/porcelain-vase.webp",
-        "combat_style_character": [
-            {
-                "id": 41,
-                "name": "Gyokko",
-                "description": "He is a demon affiliated with the Twelve Demon Moons, holding the position of Upper Rank Five. Gyokko is an easily excitable demon, constantly fawning over new inspirations for what he deems his \"art\" or what he finds to be sublime, sometimes even going against his initial impressions."
-            }
-        ]
-    },
-    {
-        "id": 37,
-        "name": "Infinity Castle Manipulation",
-        "description": "Nakime´s Blood Demon Art takes the form of an extra-dimensional space that houses a fortress of immense scale. As its owner, Nakime possesses absolute dominion over the space, being able to manipulate and alter it at will by simply strumming her biwa.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/infinite-castle.webp",
-        "combat_style_character": [
-            {
-                "id": 43,
-                "name": "Nakime",
-                "description": "She is a demon who owns and controls the Infinity Castle and serves directly under Muzan Kibutsuji. Nakime is aloof and taciturn, almost never speaking and displaying little to no emotion or will outside of obeying orders. She was extremely loyal to Muzan, listening and following his every order faultlessly."
-            }
-        ]
-    },
-    {
-        "id": 38,
-        "name": "Moon Breathing",
-        "description": "Kokushibo is the first demon that utilized Breathing Styles. His Moon Breathing is one of the most dangerous and powerful ones. He can create many chaotic crescent moon blades when slashing that vary in length and size in crescent shaped sword attacks.",
-        "img": "https://www.demonslayer-api.com/api/v1/combat-styles/images/moon-breathing.webp",
+        "id": 39,
+        "name": "Crescent Moon Blades",
+        "description": "Complementing his Moon Breathing, Kokushibo´s Blood Demon Art allows him to create and manipulate dozens of sharp blades shaped like traditional crescent moons from his flesh katana.",
+        "img": "",
         "combat_style_character": [
             {
                 "id": 44,
@@ -143,6 +207,5 @@
                 "description": "He is a demon affiliated with the Twelve Denon Moons, holding the highest position, Upper Rank One. He has battled countless Demon Slayers and has amassed vast experience and knowledge over his near 500-year long life."
             }
         ]
-    },
-    
+    }
 ]
