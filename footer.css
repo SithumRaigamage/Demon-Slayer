@@ -1,0 +1,21 @@
+.footer {
+    --bs-body-color: #fff;
+    --bs-body-bg: #0F0F0F;
+
+    /* Demon Slayer theme colors */
+    --ezy-theme-color: #FF5733;
+    --ezy-theme-color-rgb: 255, 87, 51;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* Dark Block Style */
+.dark .footer,
+.footer.dark {
+    --bs-body-color: #ffffff;
+    --bs-body-bg: #1A1A1A;
+
+    /* Additional Demon Slayer dark theme accents */
+    --ezy-theme-color: #FF5733;
+    --ezy-theme-color-rgb: 255, 87, 51;
+}
