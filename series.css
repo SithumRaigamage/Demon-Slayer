@@ -1,0 +1,57 @@
+.series {
+    --bs-body-color: #fff;
+    --bs-body-bg: #0F0F0F;
+
+    /* Demon Slayer theme colors */
+    --ezy-theme-color: #FF5733;
+    --ezy-theme-color-rgb: 255, 87, 51;
+  
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* Dark Block Style */
+.dark .series,
+.series.dark {
+    --bs-body-color: #ffffff;
+    --bs-body-bg: #1A1A1A;
+
+    /* Additional Demon Slayer dark theme accents */
+    --ezy-theme-color: #FF5733;
+    --ezy-theme-color-rgb: 255, 87, 51;
+}
+
+.series-heading {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: var(--bs-body-color);
+}
+
+.series-sub-heading {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--bs-body-color);
+}
+
+.series-item {
+    background-color: var(--ezy-item-bg);
+    border-radius: 15px;
+    box-shadow: var(--ezy-item-shadow);
+    transition: transform 0.25s ease-in-out;
+}
+
+.series-item.active {
+    background-color: var(--ezy-theme-color);
+}
+
+.series-btn {
+    padding: 12px 30px;
+}
+
+.series-btn.active {
+    background-color: #FF5733 !important;
+    border-color: #FF5733 !important;
+    color: #fff !important;
+}
+

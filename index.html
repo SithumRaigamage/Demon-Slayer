@@ -15,13 +15,16 @@
     <!-- Your other content goes here -->
     <script src="script.js"></script>
     <script src="combat.js"></script>
+    <script src="series.js"></script>
+
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="character.css">
     <link rel="stylesheet" href="combatStyle.css">
-    <link rel="stylesheet" href="footer.css"> 
+    <link rel="stylesheet" href="series.css">
+    <link rel="stylesheet" href="footer.css">
 
     <!-- Popper.js (needed for Bootstrap components like tooltips and popovers) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -203,11 +206,73 @@
         </div>
     </section>
 
+    <section class="series dark">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-6 col-xl-5 text-center">
+                    <h2 class="series-heading mb-3">Flexible Plan for you</h2>
+                    <p class="series-sub-heading mb-0">Choose a suitable plan for you.</p>
+                </div>
+            </div>
+            <div class="text-center mb-4">
+                <button id="tv-btn" class="btn series-btn active" onclick="switchPlan('tv')">TV SERIES</button>
+                <button id="movies-btn" class="btn border-0 series-btn" onclick="switchPlan('movies')">MOVIES</button>
+            </div>
+            <div id="tv-series" class="row">
+                <div class="col-md-6 col-xl-3 mt-4">
+                    <div class="series-item p-3 p-lg-5">
+                        <img src="Pictures/img_risshihen.jpg" alt="Basic TV Plan" class="img-fluid">
+                        <p class="opacity-50 mb-4 series-note"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 mt-4">
+                    <div class="series-item p-3 p-lg-5">
+                        <img src="Pictures/img_mugentrainarc.jpg" alt="Standard TV Plan" class="img-fluid">
+                        <p class="opacity-50 mb-4 series-note"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 mt-4">
+                    <div class="series-item p-3 p-lg-5">
+                        <img src="Pictures/img_mugentrain.jpg" alt="Standard TV Plan" class="img-fluid">
+                        <p class="opacity-50 mb-4 series-note"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 mt-4">
+                    <div class="series-item p-3 p-lg-5">
+                        <img src="Pictures/img_entertainment_district_arc.jpg" alt="Standard TV Plan" class="img-fluid">
+                        <p class="opacity-50 mb-4 series-note"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 mt-4">
+                    <div class="series-item p-3 p-lg-5">
+                        <img src="Pictures/img_katanakaji4.jpg" alt="Standard TV Plan" class="img-fluid">
+                        <p class="opacity-50 mb-4 series-note"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="movies" class="row" style="display: none;">
+                <div class="col-md-6 col-xl-3 mt-4">
+                    <div class="series-item p-3 p-lg-5">
+                        <img src="Pictures/img_ic.jpg" alt="Basic Movie Plan" class="img-fluid">
+                        <p class="opacity-50 mb-4 series-note"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 mt-4">
+                    <div class="series-item p-3 p-lg-5">
+                        <img src="Pictures/img_mugentrain.jpg" alt="Standard Movie Plan" class="img-fluid">
+                        <p class="opacity-50 mb-4 series-note"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section class="footer dark pt-5 pb-5">
         <div class="container">
-          <div class="text-center">
-            <p class="mb-0">Copyright all rights reserved</p>
-          </div>
+            <div class="text-center">
+                <p class="mb-0">Copyright all rights reserved</p>
+            </div>
         </div>
     </section>
 </body>
