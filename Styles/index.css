@@ -1,0 +1,50 @@
+/* Reset default margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Stops horizontal scrolling */
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Set default font and background */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0F0F0F;
+    color: #333;
+}
+
+/* Basic section styling */
+section {
+    padding: 2rem;
+    margin: auto; /* Centering instead of negative margin */
+    max-width: 100%; /* Ensure it doesn't exceed viewport width */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Customizing the scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background */
+    border-radius: 10px;
+}
+
+/* Handle (movable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #555; /* Medium-dark color */
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Lighter shade when hovered */
+}
+
+
+
