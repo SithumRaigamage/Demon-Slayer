@@ -6,7 +6,6 @@ This is a Demon Slayer web application that allows users to search for and view 
 
 ## Features
 
-- Search for Demon Slayer characters by name
 - Display detailed information about each character
 - View profile images of each character
 
@@ -23,7 +22,5 @@ This is a Demon Slayer web application that allows users to search for and view 
 
 3. Open the `index.html` file in your web browser.
 
-4. Enter the name of a Demon Slayer character in the search bar and click the search button.
-
-5. View the detailed information and profile image of the character.
+4. View the detailed information and profile image of the character.
 
