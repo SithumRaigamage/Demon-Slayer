@@ -1,0 +1,49 @@
+# Docker ignore file - exclude files from Docker build context
+# This speeds up builds and reduces image size
+
+# Git
+.git
+.gitignore
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# SonarQube
+.scannerwork/
+sonar-project.properties
+
+# Documentation
+README.md
+*.md
+
+# Scripts (not needed in container)
+run-sonar.sh
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Postman collection
+*.postman_collection.json
+
+# Docker files (prevent recursive copy)
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Text files (data/reference files)
+Text_Files/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+tmp/
+temp/
