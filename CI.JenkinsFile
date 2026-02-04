@@ -77,8 +77,15 @@ pipeline {
                         -Dsonar.host.url=${SONAR_SERVER_URL} \
                         -Dsonar.token=${SONAR_AUTH_TOKEN} \
                         -Dsonar.sources=. \
+                        -Dsonar.sourceEncoding=UTF-8 \
                         -Dsonar.inclusions=**/*.js,**/*.html,**/*.css \
-                        -Dsonar.exclusions=node_modules/**,Pictures/**,*.mp3,*.mov
+                        -Dsonar.exclusions=**/node_modules/**,**/*.min.js,**/*.min.css,**/Pictures/**,**/*.mp3,**/*.mov,**/.git/** \
+                        -Dsonar.javascript.file.suffixes=.js \
+                        -Dsonar.html.file.suffixes=.html \
+                        -Dsonar.css.file.suffixes=.css \
+                        -Dsonar.qualitygate.wait=true \
+                        -Dsonar.cpd.js.minimumTokens=100 \
+                        -Dsonar.cpd.css.minimumTokens=100
                     '''
                 }
             }
