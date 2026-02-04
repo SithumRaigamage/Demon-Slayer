@@ -33,6 +33,11 @@ pipeline {
         booleanParam(name: 'SKIP_SONAR', defaultValue: false, description: 'Skip SonarQube analysis?')
     }
 
+    // NodeJS is required by SonarQube to analyze JavaScript files
+    tools {
+        nodejs 'NODEJS'
+    }
+
     stages {
         // Stage to checkout source code from the provided Git repository and branch
         stage('Checkout') {
@@ -89,7 +94,7 @@ pipeline {
                         imageName = "${params.ENVIRONMENT}-${imageName}"
                     }
                     env.FINAL_IMAGE_NAME = imageName
-                    env.FULL_IMAGE_TAG = "${DOCKER_REGISTRY}/sithumraigamage/${env.FINAL_IMAGE_NAME}:${params.RELEASE_VERSION}"
+                    env.FULL_IMAGE_TAG = "sithumraigamage/${env.FINAL_IMAGE_NAME}:${params.RELEASE_VERSION}"
                     echo "🐳 Docker Image: ${env.FULL_IMAGE_TAG}"
                 }
             }
@@ -101,7 +106,7 @@ pipeline {
                 script {
                     echo "🔨 Building Docker image..."
                     sh "docker build -t ${env.FULL_IMAGE_TAG} ."
-                    sh "docker tag ${env.FULL_IMAGE_TAG} ${DOCKER_REGISTRY}/sithumraigamage/${env.FINAL_IMAGE_NAME}:latest"
+                    sh "docker tag ${env.FULL_IMAGE_TAG} sithumraigamage/${env.FINAL_IMAGE_NAME}:latest"
                 }
             }
         }
