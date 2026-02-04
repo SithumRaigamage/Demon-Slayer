@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Porcelain Vase Spells", description: "Gyokko´s Blood Demon Art permit him spawn pots anywhere around.", image: 'https://www.demonslayer-api.com/api/v1/combat-styles/images/porcelain-vase.webp'},
         { name: "Infinity Castle Manipulation", description: "Nakime´s Blood Demon Art takes the form of an extra-dimensional space that houses a fortress of immense scale.", image: 'https://www.demonslayer-api.com/api/v1/combat-styles/images/infinite-castle.webp'},
         { name: "Moon Breathing", description: "Kokushibo is the first demon that utilized Breathing Styles. His Moon Breathing is one of the most dangerous and powerful ones.", image: 'https://www.demonslayer-api.com/api/v1/combat-styles/images/moon-breathing.webp'},
-        { name: "Flower Breathing", description: "Kanao Tsuyuri is the only known user of Flower Breathing, a Breathing Style that mimics the beauty and grace of flowers.", image: 'flower breathing.jpeg'},
-        { name: "Stone Breathing", description: "Gyomei Himejima is the only known user of Stone Breathing, a Breathing Style that mimics the strength and resilience of stone.", image: 'stone breathing.jpeg'},
+        { name: "Flower Breathing", description: "Kanao Tsuyuri is the only known user of Flower Breathing, a Breathing Style that mimics the beauty and grace of flowers.", image: 'Pictures/flower breathing.jpeg'},
+        { name: "Stone Breathing", description: "Gyomei Himejima is the only known user of Stone Breathing, a Breathing Style that mimics the strength and resilience of stone.", image: 'Pictures/stone breathing.jpeg'},
         ];
 
     const renderItems = () => {

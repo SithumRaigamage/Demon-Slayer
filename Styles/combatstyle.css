@@ -60,9 +60,60 @@
 
 /* card */
 .combat .card {
-  background-color: var(--ezy-card-bg);
+  background-color: #1a1a1a;
   border: 0;
-  border-radius: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.combat .card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(255, 87, 51, 0.25);
+}
+
+.combat .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.combat .card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.combat .card-body {
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.9));
+  padding: 20px;
+}
+
+.combat .card-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.combat .card-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--ezy-theme-color);
+  border-radius: 2px;
+}
+
+.combat .card-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .combat-card-content {

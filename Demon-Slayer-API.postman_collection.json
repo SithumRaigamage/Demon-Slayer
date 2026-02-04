@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "demon-slayer-api-collection",
+		"name": "Demon Slayer API",
+		"description": "Collection of API endpoints for the Demon Slayer fan website. This collection includes endpoints for fetching characters, combat styles, and other related data from the Demon Slayer API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://www.demonslayer-api.com/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "defaultLimit",
+			"value": "45",
+			"type": "string"
+		},
+		{
+			"key": "defaultPage",
+			"value": "1",
+			"type": "string"
+		}
+	],
+	"item": [
+		{
+			"name": "Characters",
+			"item": [
+				{
+					"name": "Get All Characters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/characters?limit={{defaultLimit}}&page={{defaultPage}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"characters"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "{{defaultLimit}}",
+									"description": "Number of characters to return per page"
+								},
+								{
+									"key": "page",
+									"value": "{{defaultPage}}",
+									"description": "Page number for pagination"
+								}
+							]
+						},
+						"description": "Fetches a paginated list of all Demon Slayer characters including their name, race, image, and other details."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Characters (Limited)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/characters?limit=10&page=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"characters"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Limit to 10 characters"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "First page"
+								}
+							]
+						},
+						"description": "Fetches a smaller set of characters (10) for testing purposes."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Character by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/characters/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"characters",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Character ID"
+								}
+							]
+						},
+						"description": "Fetches details for a specific character by their ID."
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints related to Demon Slayer characters (Demon Slayers, Demons, Hashira, etc.)"
+		},
+		{
+			"name": "Combat Styles",
+			"item": [
+				{
+					"name": "Get All Combat Styles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/combat-styles?limit={{defaultLimit}}&page={{defaultPage}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"combat-styles"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "{{defaultLimit}}",
+									"description": "Number of combat styles to return per page"
+								},
+								{
+									"key": "page",
+									"value": "{{defaultPage}}",
+									"description": "Page number for pagination"
+								}
+							]
+						},
+						"description": "Fetches all combat styles including Breathing Styles (Water, Flame, Thunder, etc.) and Blood Demon Arts."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Combat Styles (Limited)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/combat-styles?limit=10&page=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"combat-styles"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Limit to 10 combat styles"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "First page"
+								}
+							]
+						},
+						"description": "Fetches a smaller set of combat styles for testing."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Combat Style by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/combat-styles/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"combat-styles",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Combat Style ID"
+								}
+							]
+						},
+						"description": "Fetches details for a specific combat style by ID."
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints related to combat styles (Breathing Styles and Blood Demon Arts)"
+		},
+		{
+			"name": "Breathing Styles",
+			"item": [
+				{
+					"name": "Get All Breathing Styles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/breathing-styles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"breathing-styles"
+							]
+						},
+						"description": "Fetches all Breathing Styles used by Demon Slayers."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Breathing Style by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/breathing-styles/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"breathing-styles",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Breathing Style ID"
+								}
+							]
+						},
+						"description": "Fetches a specific Breathing Style by ID."
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints specifically for Breathing Styles (Sun, Water, Thunder, Flame, Wind, Stone, etc.)"
+		},
+		{
+			"name": "Blood Demon Arts",
+			"item": [
+				{
+					"name": "Get All Blood Demon Arts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/blood-demon-arts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blood-demon-arts"
+							]
+						},
+						"description": "Fetches all Blood Demon Arts used by demons."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Blood Demon Art by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/blood-demon-arts/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blood-demon-arts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Blood Demon Art ID"
+								}
+							]
+						},
+						"description": "Fetches a specific Blood Demon Art by ID."
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for Blood Demon Arts (supernatural abilities used by demons)"
+		},
+		{
+			"name": "Demons",
+			"item": [
+				{
+					"name": "Get All Demons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/demons",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"demons"
+							]
+						},
+						"description": "Fetches all demons including Twelve Kizuki members."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Demon by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/demons/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"demons",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Demon ID"
+								}
+							]
+						},
+						"description": "Fetches a specific demon by ID."
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for demon-specific data"
+		},
+		{
+			"name": "Hashira",
+			"item": [
+				{
+					"name": "Get All Hashira",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/hashira",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"hashira"
+							]
+						},
+						"description": "Fetches all Hashira (Pillars) - the strongest members of the Demon Slayer Corps."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hashira by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/hashira/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"hashira",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Hashira ID"
+								}
+							]
+						},
+						"description": "Fetches a specific Hashira by ID."
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for Hashira (the elite Demon Slayers)"
+		}
+	]
+}
