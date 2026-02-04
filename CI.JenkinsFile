@@ -62,30 +62,18 @@ pipeline {
         }
 
         // Stage to perform static code analysis using SonarQube
+        // Uses sonar-project.properties for configuration
         stage('SonarQube Analysis') {
             when {
                 expression { params.SKIP_SONAR == false }
             }
             steps {
-                echo "📊 Running SonarQube analysis..."
+                echo "📊 Running SonarQube analysis using sonar-project.properties..."
                 withSonarQubeEnv('SonarServer') { 
                     sh '''
                         ${SCANNER_HOME}/bin/sonar-scanner \
-                        -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
-                        -Dsonar.projectName="${SONAR_PROJECT_NAME}" \
-                        -Dsonar.projectVersion=${RELEASE_VERSION} \
                         -Dsonar.host.url=${SONAR_SERVER_URL} \
-                        -Dsonar.token=${SONAR_AUTH_TOKEN} \
-                        -Dsonar.sources=. \
-                        -Dsonar.sourceEncoding=UTF-8 \
-                        -Dsonar.inclusions=**/*.js,**/*.html,**/*.css \
-                        -Dsonar.exclusions=**/node_modules/**,**/*.min.js,**/*.min.css,**/Pictures/**,**/*.mp3,**/*.mov,**/.git/** \
-                        -Dsonar.javascript.file.suffixes=.js \
-                        -Dsonar.html.file.suffixes=.html \
-                        -Dsonar.css.file.suffixes=.css \
-                        -Dsonar.qualitygate.wait=true \
-                        -Dsonar.cpd.js.minimumTokens=100 \
-                        -Dsonar.cpd.css.minimumTokens=100
+                        -Dsonar.token=${SONAR_AUTH_TOKEN}
                     '''
                 }
             }
