@@ -30,7 +30,6 @@ pipeline {
         string(name: 'BRANCH', defaultValue: 'main', description: 'Branch to build')
         choice(name: 'ENVIRONMENT', choices: ['dev', 'qa', 'staging', 'prod'], description: 'Target Environment')
         booleanParam(name: 'SEND_EMAIL', defaultValue: true, description: 'Send email notifications?')
-        booleanParam(name: 'SKIP_TESTS', defaultValue: false, description: 'Skip test stage?')
         booleanParam(name: 'SKIP_SONAR', defaultValue: false, description: 'Skip SonarQube analysis?')
     }
 
