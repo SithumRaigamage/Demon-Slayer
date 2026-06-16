@@ -3,9 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demon Slayer</title>
+    <title>Demon Slayer — Kimetsu no Yaiba Fan Site</title>
+    <meta name="description" content="Explore Demon Slayer: Kimetsu no Yaiba — browse all characters, combat breathing styles, and story arcs from the iconic anime series.">
+    <meta property="og:title" content="Demon Slayer — Kimetsu no Yaiba Fan Site">
+    <meta property="og:description" content="Explore Demon Slayer: characters, combat styles, and story arcs.">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/png" sizes="64x64" href="Pictures/logo.png">
 
     <!-- AOS Animation Library -->
@@ -15,36 +18,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- Your other content goes here -->
-    <script src="Js/script.js"></script>
-    <script src="Js/combat.js"></script>
-    <script src="Js/series.js"></script>
+    <!-- Font Awesome v6 (single version) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="Styles/index.css">
     <link rel="stylesheet" href="Styles/navbar.css">
     <link rel="stylesheet" href="Styles/home.css">
     <link rel="stylesheet" href="Styles/about.css">
     <link rel="stylesheet" href="Styles/character.css">
-    <link rel="stylesheet" href="Styles/combatStyle.css">
+    <link rel="stylesheet" href="Styles/combatstyle.css">
     <link rel="stylesheet" href="Styles/series.css">
     <link rel="stylesheet" href="Styles/footer.css">
-
-    <!-- Popper.js (needed for Bootstrap components like tooltips and popovers) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-
-    <!-- Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="ezy__nav4 dark">
-        <nav class="navbar navbar-expand-lg  py-3" aria-label="Main navigation">
+        <nav class="navbar navbar-expand-lg py-3" aria-label="Main navigation">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     DEMON SLAYER
@@ -64,13 +58,18 @@
                         <li class="nav-item"><a class="nav-link" href="#combat">Combat Styles</a></li>
                         <li class="nav-item"><a class="nav-link" href="#series">Series</a></li>
                     </ul>
-                    <ul class="navbar-nav flex-row mb-2 mb-lg-0">
+                    <ul class="navbar-nav flex-row mb-2 mb-lg-0 gap-2">
                         <li class="nav-item">
-                            <button class="btn btn-outline-light px-3" id="play"
-                                onclick="document.getElementById('backgroundAudio').play()">Play</button>
+                            <button class="btn btn-outline-light px-3" id="audioToggle" aria-label="Toggle background music">
+                                <i class="fas fa-play me-1" id="audioIcon"></i> Play
+                            </button>
                         </li>
                         <li class="nav-item">
-                            <button class="btn btn-outline-light px-3" id="watch">Watch</button>
+                            <a class="btn btn-outline-light px-3" id="watch"
+                               href="https://www.crunchyroll.com/series/GY5VEL43R/demon-slayer-kimetsu-no-yaiba"
+                               target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-tv me-1"></i> Watch
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -78,17 +77,28 @@
         </nav>
     </div>
 
+    <!-- Home / Hero -->
     <section class="home dark" id="home">
-        <video class="gameBgVid" src="dsvid.mov" autoplay muted loop style="width: 100%;"></video>
-        <audio id="backgroundAudio" class="backgroundAudio" src="Demon-Slayer.mp3" loop></audio>
+        <video class="gameBgVid" src="dsvid.mov" autoplay muted loop playsinline></video>
+        <audio id="backgroundAudio" src="Demon-Slayer.mp3" loop></audio>
+        <div class="hero-overlay">
+            <div class="hero-content" data-aos="fade-up">
+                <p class="hero-eyebrow">Kimetsu no Yaiba</p>
+                <h1 class="hero-title">DEMON SLAYER</h1>
+                <p class="hero-tagline">In a world consumed by darkness, one boy's resolve burns brighter than any flame.</p>
+                <a href="#characters" class="btn hero-cta">
+                    Explore Characters <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
     </section>
 
+    <!-- About -->
     <section class="ezy__about6 dark" id="about">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-12 col-md-8" data-aos="fade-up">
-                    <h2 class="ezy__about6-heading fw-bold mb-4">Demon
-                        Slayer</h2>
+                    <h2 class="ezy__about6-heading fw-bold mb-4">Demon Slayer</h2>
                     <p class="ezy__about6-sub-heading">
                         In a world where demons threaten humanity's
                         existence, the Demon Slayer Corps stands as
@@ -103,8 +113,7 @@
             <div class="row align-items-center justify-content-center mt-5">
                 <div class="col-12 col-md-5 order-2">
                     <div class="d-flex flex-column justify-content-center ezy__about6-content pe-md-5">
-                        <h4 class="fw-bold mb-3">The Tale of Tanjiro
-                            Kamado</h4>
+                        <h3 class="fw-bold mb-3">The Tale of Tanjiro Kamado</h3>
                         <p class="mb-0">
                             Follow the journey of Tanjiro Kamado, a young
                             boy who becomes a demon slayer after his
@@ -116,7 +125,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 order-1 order-md-2 mb-4 mb-md-0">
+                <div class="col-12 col-md-5 order-1 order-md-2 mb-4 mb-md-0" data-aos="fade-left">
                     <div>
                         <img src="Pictures/tanjiro.jpeg" alt="Tanjiro Kamado" class="img-fluid" />
                     </div>
@@ -125,12 +134,11 @@
             <div class="row align-items-center justify-content-center mt-5">
                 <div class="col-12 col-md-5 order-2">
                     <div class="d-flex flex-column justify-content-center ezy__about6-content ps-md-5">
-                        <h4 class="fw-bold mb-3">The Demon Slayer Corps</h4>
+                        <h3 class="fw-bold mb-3">The Demon Slayer Corps</h3>
                         <p class="mb-0">
                             The Demon Slayer Corps is an ancient
                             organization dedicated to protecting humanity
-                            from
-                            demons.
+                            from demons.
                             Through rigorous training and mastery of
                             breathing techniques, these warriors develop
                             supernatural abilities
@@ -139,7 +147,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 order-1 mb-4 mb-md-0">
+                <div class="col-12 col-md-5 order-1 mb-4 mb-md-0" data-aos="fade-right">
                     <div>
                         <img src="Pictures/corps.jpeg" alt="Demon Slayer Corps" class="img-fluid" />
                     </div>
@@ -148,41 +156,69 @@
         </div>
     </section>
 
+    <!-- Characters -->
     <section class="characters dark" id="characters">
         <div class="container">
-            <h2 class="characters-heading text-center mb-4">Characters</h2>
+            <h2 class="characters-heading text-center mb-4" data-aos="fade-up">Characters</h2>
+
+            <!-- Search & Filter Controls -->
+            <div class="row justify-content-center mb-4 g-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-12 col-md-5">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input
+                            type="search"
+                            id="characterSearch"
+                            class="form-control character-search"
+                            placeholder="Search characters…"
+                            aria-label="Search characters"
+                        >
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <select id="raceFilter" class="form-select character-filter" aria-label="Filter by race">
+                        <option value="">All Races</option>
+                        <option value="Human">Human</option>
+                        <option value="Demon">Demon</option>
+                        <option value="Half-Demon">Half-Demon</option>
+                    </select>
+                </div>
+            </div>
+
             <div id="characterGrid" class="row justify-content-center mb-4 mb-md-5"></div>
         </div>
-        <nav class="pagination d-flex justify-content-center" aria-label="Pagination">
+        <nav class="pagination d-flex justify-content-center" aria-label="Character pagination">
             <ol class="pagination__list pt4-flex pt4-flex-wrap pt4-gap-3xs pt4-justify-center">
                 <!-- Pagination will be dynamically generated -->
             </ol>
         </nav>
     </section>
 
+    <!-- Combat Styles -->
     <section class="combat dark" id="combat">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="combat-heading mb-2">Combat Styles</h1>
+                    <h2 class="combat-heading mb-2" data-aos="fade-up">Combat Styles</h2>
                     <div class="col-12 col-md-6">
-                        <p class="combat-sub-heading">
+                        <p class="combat-sub-heading" data-aos="fade-up" data-aos-delay="100">
                             Learn the different combat styles used by the
                             Demon Slayer Corps to defeat demons and protect
                             humanity.
                         </p>
                     </div>
                 </div>
-                <!-- Empty div where cards will be appended -->
+                <!-- Cards rendered by combat.js -->
                 <div id="combatContainer" class="row"></div>
             </div>
         </div>
     </section>
 
+    <!-- Series -->
     <section class="series dark" id="series">
         <div class="container">
             <div class="row justify-content-center mb-5">
-                <div class="col-lg-6 col-xl-5 text-center">
+                <div class="col-lg-6 col-xl-5 text-center" data-aos="fade-up">
                     <h2 class="series-heading mb-3">Demon Slayer Portfolio</h2>
                     <p class="series-sub-heading mb-0">Explore the breathtaking story arcs and movies from Demon Slayer.</p>
                 </div>
@@ -192,56 +228,90 @@
                 <button id="movies-btn" class="btn border-0 series-btn" onclick="switchPlan('movies')">MOVIES</button>
             </div>
             <div id="tv-series" class="row">
-                <div class="col-md-6 col-xl-3 mt-4">
-                    <div class="series-item p-3 p-lg-5">
-                        <img src="Pictures/img_risshihen.jpg" alt="Risshihen Arc" class="img-fluid">
-                        <p class="opacity-75 mb-4 series-note">The origins of Demon Slayer's story, introducing Tanjiro Kamado and his fateful journey.</p>
+                <div class="col-md-6 col-xl-3 mt-4" data-aos="fade-up">
+                    <div class="series-item p-3 p-lg-4">
+                        <img src="Pictures/img_risshihen.jpg" alt="Risshihen Arc" class="img-fluid series-img">
+                        <p class="opacity-75 mt-3 mb-0 series-note">The origins of Demon Slayer's story, introducing Tanjiro Kamado and his fateful journey.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-3 mt-4">
-                    <div class="series-item p-3 p-lg-5">
-                        <img src="Pictures/img_mugentrainarc.jpg" alt="Mugen Train Arc" class="img-fluid">
-                        <p class="opacity-75 mb-4 series-note">An action-packed continuation where Tanjiro and the Hashira face off against a formidable demon.</p>
+                <div class="col-md-6 col-xl-3 mt-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="series-item p-3 p-lg-4">
+                        <img src="Pictures/img_mugentrainarc.jpg" alt="Mugen Train Arc" class="img-fluid series-img">
+                        <p class="opacity-75 mt-3 mb-0 series-note">An action-packed continuation where Tanjiro and the Hashira face off against a formidable demon.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-3 mt-4">
-                    <div class="series-item p-3 p-lg-5">
-                        <img src="Pictures/img_entertainment_district_arc.jpg" alt="Entertainment District Arc" class="img-fluid">
-                        <p class="opacity-75 mb-4 series-note">A visually stunning battle against Upper-Rank demons in the vibrant streets of the Entertainment District.</p>
+                <div class="col-md-6 col-xl-3 mt-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="series-item p-3 p-lg-4">
+                        <img src="Pictures/img_entertainment_district_arc.jpg" alt="Entertainment District Arc" class="img-fluid series-img">
+                        <p class="opacity-75 mt-3 mb-0 series-note">A visually stunning battle against Upper-Rank demons in the vibrant streets of the Entertainment District.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-3 mt-4">
-                    <div class="series-item p-3 p-lg-5">
-                        <img src="Pictures/img_katanakaji4.jpg" alt="Swordsmith Village Arc" class="img-fluid">
-                        <p class="opacity-75 mb-4 series-note">The journey to the Swordsmith Village, where Tanjiro faces new challenges and uncovers hidden truths.</p>
+                <div class="col-md-6 col-xl-3 mt-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="series-item p-3 p-lg-4">
+                        <img src="Pictures/img_katanakaji4.jpg" alt="Swordsmith Village Arc" class="img-fluid series-img">
+                        <p class="opacity-75 mt-3 mb-0 series-note">The journey to the Swordsmith Village, where Tanjiro faces new challenges and uncovers hidden truths.</p>
                     </div>
                 </div>
             </div>
-            <div id="movies" class="row" style="display: none;">
-                <div class="col-md-6 col-xl-3 mt-4">
-                    <div class="series-item p-3 p-lg-5">
-                        <img src="Pictures/img_ic.jpg" alt="Infinity Castle Arc" class="img-fluid">
-                        <p class="opacity-75 mb-4 series-note">An upcoming arc promising intense battles as the Demon Slayer Corps face their ultimate enemy.</p>
+            <div id="movies" class="row d-none">
+                <div class="col-md-6 col-xl-3 mt-4" data-aos="fade-up">
+                    <div class="series-item p-3 p-lg-4">
+                        <img src="Pictures/img_ic.jpg" alt="Infinity Castle Arc" class="img-fluid series-img">
+                        <p class="opacity-75 mt-3 mb-0 series-note">An upcoming arc promising intense battles as the Demon Slayer Corps face their ultimate enemy.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-3 mt-4">
-                    <div class="series-item p-3 p-lg-5">
-                        <img src="Pictures/img_mugentrain.jpg" alt="Mugen Train Movie" class="img-fluid">
-                        <p class="opacity-75 mb-4 series-note">A record-breaking anime film, following the events of the Mugen Train Arc with heart-wrenching battles.</p>
+                <div class="col-md-6 col-xl-3 mt-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="series-item p-3 p-lg-4">
+                        <img src="Pictures/img_mugentrain.jpg" alt="Mugen Train Movie" class="img-fluid series-img">
+                        <p class="opacity-75 mt-3 mb-0 series-note">A record-breaking anime film, following the events of the Mugen Train Arc with heart-wrenching battles.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section class="footer dark pt-5 pb-5">
+    <!-- Footer -->
+    <footer class="footer dark pt-5 pb-4">
         <div class="container">
+            <div class="row gy-4 mb-4">
+                <div class="col-12 col-md-4">
+                    <p class="footer-brand mb-2">DEMON SLAYER</p>
+                    <p class="footer-tagline opacity-75">A tribute to the world of Kimetsu no Yaiba — where every breath is a weapon.</p>
+                </div>
+                <div class="col-6 col-md-2 offset-md-2">
+                    <p class="footer-section-title mb-3">Navigate</p>
+                    <ul class="list-unstyled footer-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#characters">Characters</a></li>
+                        <li><a href="#combat">Combat Styles</a></li>
+                        <li><a href="#series">Series</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <p class="footer-section-title mb-3">Watch</p>
+                    <ul class="list-unstyled footer-nav">
+                        <li><a href="https://www.crunchyroll.com/series/GY5VEL43R/demon-slayer-kimetsu-no-yaiba" target="_blank" rel="noopener">Crunchyroll</a></li>
+                        <li><a href="https://www.netflix.com/title/81091393" target="_blank" rel="noopener">Netflix</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-2">
+                    <p class="footer-section-title mb-3">Connect</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/SithumRaigamage" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
             <div class="text-center">
-                <p class="mb-0">Copyright all rights reserved</p>
+                <p class="mb-0 opacity-50 footer-copy">
+                    &copy; 2024 Sithum Raigamage &mdash; Fan site only. Demon Slayer is property of Koyoharu Gotouge &amp; Shueisha.
+                </p>
             </div>
         </div>
-    </section>
+    </footer>
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
@@ -268,6 +338,10 @@
         </div>
     </div>
 
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -278,6 +352,10 @@
             offset: 100
         });
     </script>
+    <!-- Custom Scripts (deferred via placement at end of body) -->
+    <script src="Js/script.js"></script>
+    <script src="Js/combat.js"></script>
+    <script src="Js/series.js"></script>
 </body>
 
 </html>

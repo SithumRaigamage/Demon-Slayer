@@ -1,13 +1,21 @@
+// series.js — Series section tab toggle
+// Uses CSS class toggle instead of inline style mutation
+
 function switchPlan(plan) {
+    const tvSection = document.getElementById('tv-series');
+    const moviesSection = document.getElementById('movies');
+    const tvBtn = document.getElementById('tv-btn');
+    const moviesBtn = document.getElementById('movies-btn');
+
     if (plan === 'tv') {
-        document.getElementById('tv-series').style.display = 'flex';
-        document.getElementById('movies').style.display = 'none';
-        document.getElementById('tv-btn').classList.add('active');
-        document.getElementById('movies-btn').classList.remove('active');
+        tvSection.classList.remove('d-none');
+        moviesSection.classList.add('d-none');
+        tvBtn.classList.add('active');
+        moviesBtn.classList.remove('active');
     } else {
-        document.getElementById('tv-series').style.display = 'none';
-        document.getElementById('movies').style.display = 'flex';
-        document.getElementById('movies-btn').classList.add('active');
-        document.getElementById('tv-btn').classList.remove('active');
+        tvSection.classList.add('d-none');
+        moviesSection.classList.remove('d-none');
+        moviesBtn.classList.add('active');
+        tvBtn.classList.remove('active');
     }
 }

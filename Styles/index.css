@@ -1,21 +1,33 @@
-/* Reset default margins and padding */
+/* =============================================
+   index.css — Global base styles
+   ============================================= */
+
+/* Reset */
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Stops horizontal scrolling */
+    overflow-x: hidden;
     width: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-/* Set default font and background */
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
     background-color: #0F0F0F;
-    color: #333;
+    color: #eee;
 }
 
-/* Scroll to Top Button */
+/* Base section — dark background, no white override */
+section {
+    padding: 2rem;
+    max-width: 100%;
+}
+
+/* =============================================
+   Scroll to Top Button
+   ============================================= */
 .scroll-to-top {
     position: fixed;
     bottom: 30px;
@@ -46,7 +58,9 @@ body {
     transform: translateY(0);
 }
 
-/* Loading Overlay */
+/* =============================================
+   Loading Overlay
+   ============================================= */
 .loading-overlay {
     position: fixed;
     top: 0;
@@ -81,7 +95,9 @@ body {
     to { transform: rotate(360deg); }
 }
 
-/* Skeleton Loading */
+/* =============================================
+   Skeleton Loading
+   ============================================= */
 .skeleton {
     background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
     background-size: 200% 100%;
@@ -90,7 +106,7 @@ body {
 }
 
 @keyframes shimmer {
-    0% { background-position: 200% 0; }
+    0%   { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
 
@@ -99,37 +115,42 @@ body {
     margin-bottom: 20px;
 }
 
-/* Basic section styling */
-section {
-    padding: 2rem;
-    margin: auto; /* Centering instead of negative margin */
-    max-width: 100%; /* Ensure it doesn't exceed viewport width */
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Customizing the scrollbar */
+/* =============================================
+   Custom Scrollbar
+   ============================================= */
 ::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
+    width: 8px;
 }
 
-/* Track (background of the scrollbar) */
 ::-webkit-scrollbar-track {
-    background: #1e1e1e; /* Dark background */
+    background: #1e1e1e;
     border-radius: 10px;
 }
 
-/* Handle (movable part of the scrollbar) */
 ::-webkit-scrollbar-thumb {
-    background: #555; /* Medium-dark color */
+    background: #555;
     border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #888; /* Lighter shade when hovered */
+    background: #888;
 }
 
+/* =============================================
+   Reduced Motion Accessibility
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 
-
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

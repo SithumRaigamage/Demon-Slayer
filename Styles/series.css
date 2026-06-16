@@ -1,13 +1,19 @@
+/* =============================================
+   series.css — Series / Portfolio section
+   ============================================= */
+
 .series {
     --bs-body-color: #fff;
     --bs-body-bg: #0F0F0F;
-
-    /* Demon Slayer theme colors */
     --ezy-theme-color: #FF5733;
     --ezy-theme-color-rgb: 255, 87, 51;
-  
+    /* Define previously missing item vars */
+    --ezy-item-bg: #1e1e1e;
+    --ezy-item-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+
     background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
+    padding: 80px 0;
 }
 
 /* Dark Block Style */
@@ -15,43 +21,86 @@
 .series.dark {
     --bs-body-color: #ffffff;
     --bs-body-bg: #1A1A1A;
-
-    /* Additional Demon Slayer dark theme accents */
     --ezy-theme-color: #FF5733;
     --ezy-theme-color-rgb: 255, 87, 51;
+    --ezy-item-bg: #242424;
+    --ezy-item-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
 .series-heading {
     font-weight: bold;
     font-size: 25px;
-    line-height: 25px;
+    line-height: 1.2;
     color: var(--bs-body-color);
+}
+
+@media (min-width: 768px) {
+    .series-heading {
+        font-size: 45px;
+    }
 }
 
 .series-sub-heading {
     font-size: 16px;
-    line-height: 22px;
-    color: var(--bs-body-color);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
 }
 
+/* Series card */
 .series-item {
     background-color: var(--ezy-item-bg);
-    border-radius: 15px;
+    border-radius: 16px;
     box-shadow: var(--ezy-item-shadow);
-    transition: transform 0.25s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
 }
 
-.series-item.active {
-    background-color: var(--ezy-theme-color);
+.series-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(255, 87, 51, 0.25);
 }
 
+.series-img {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.series-item:hover .series-img {
+    transform: scale(1.04);
+}
+
+.series-note {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Toggle Buttons */
 .series-btn {
-    padding: 12px 30px;
+    padding: 10px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0 4px;
+    transition: all 0.25s ease;
+}
+
+.series-btn:hover {
+    color: #fff;
+    border-color: rgba(255, 87, 51, 0.5);
 }
 
 .series-btn.active {
     background-color: #FF5733 !important;
     border-color: #FF5733 !important;
     color: #fff !important;
+    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.4);
 }
-

@@ -1,32 +1,111 @@
+/* =============================================
+   footer.css — Footer & Modal styles
+   ============================================= */
+
 .footer {
     --bs-body-color: #fff;
     --bs-body-bg: #0F0F0F;
-
-    /* Demon Slayer theme colors */
     --ezy-theme-color: #FF5733;
     --ezy-theme-color-rgb: 255, 87, 51;
     background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Dark Block Style */
 .dark .footer,
 .footer.dark {
     --bs-body-color: #ffffff;
-    --bs-body-bg: #1A1A1A;
-
-    /* Additional Demon Slayer dark theme accents */
+    --bs-body-bg: #111111;
     --ezy-theme-color: #FF5733;
     --ezy-theme-color-rgb: 255, 87, 51;
 }
 
-.footer p {
-    opacity: 0.7;
-    font-size: 14px;
+/* Brand */
+.footer-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #FF5733;
+    letter-spacing: 0.08em;
 }
 
-/* Modal enhancements */
+.footer-tagline {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 260px;
+}
+
+/* Section titles */
+.footer-section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #FF5733;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* Nav links */
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #FF5733;
+}
+
+/* Social icons */
+.footer-social {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-social a:hover {
+    background: #FF5733;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Divider */
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.08);
+    margin: 1.5rem 0 1.25rem;
+}
+
+/* Copyright */
+.footer-copy {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* =============================================
+   Character Modal Enhancements
+   ============================================= */
 #characterModal .modal-content {
     border-radius: 16px;
     border: 1px solid rgba(255, 87, 51, 0.3);
@@ -45,6 +124,8 @@
 #characterModal .modal-body img {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    object-fit: cover;
 }
 
 .detail-item {
